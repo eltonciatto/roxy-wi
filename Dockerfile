@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # 2. Adicionar repositório oficial do Roxy-WI
 RUN echo "deb [arch=amd64, trusted=yes] https://repo.roxy-wi.org/ubuntu \
-      $(lsb_release -cs) stable" \
+      jammy stable" \
     > /etc/apt/sources.list.d/roxy-wi.list && \
     curl -fsSL https://repo.roxy-wi.org/roxy-wi-public.key | apt-key add -
 
